@@ -21,12 +21,12 @@ echo -e "    \      /  |   ||  |_   |  |   |   |_|  ||  | |__| \   /     "
 echo -e "     \____/   |___||____|  |__|    \_____ / |__|       |_|      "
 echo -e "                                                                "
 echo -e "----------------------------------------------------------------"
-echo -e "    ██████╗ ██████╗ ██████╗     █████╗   ██████╗  █████╗        "
-echo -e "    ███═══╝ ██════╝ ██    ██╗  ██    ██╗ ██   ██╗██╔══██╗       "
-echo -e "    █████╗  █████╗  ██     ██╗██      ██╗██████╔╝███████║       "
-echo -e "    ███══╝  ██═══╝  ██    ██╔╝ ██    ██╔╝██   ██║██║  ██║       "
-echo -e "    ███╗    ██████╗ ██████╔═╝   ██████╔╝ ██   ██║██║  ██║       "
-echo -e "    ╚══╝    ╚═════╝ ╚═════╝     ╚═════╝  ╚═╝  ╚═╝╚═╝  ╚═╝       "
+echo -e "     ██   ██╗   █████╗    ██████╗   █████╗ ██████╗  █████╗      "
+echo -e "     ███  ██║  ██    ██╗  ██    ██╗██╔══██╗██   ██╗██╔══██╗     "
+echo -e "     ██ █ ██║ ██      ██╗ ██████╔═╝███████║██████╔╝███████║     "
+echo -e "     ██  ███║  ██    ██╔╝ ██    ██╗██║  ██║██║  ██║██║  ██║     "
+echo -e "     ██   ██║   ██████╔╝  ██████╔═╝██║  ██║██║  ██║██║  ██║     "
+echo -e "     ╚═╝  ╚═╝   ╚═════╝   ╚═════╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝     "
 echo -e "----------------------------------------------------------------"
 
 # Make sure each command executes properly
@@ -65,12 +65,12 @@ echo -e "    \      /  |   ||  |_   |  |   |   |_|  ||  | |__| \   /     "
 echo -e "     \____/   |___||____|  |__|    \_____ / |__|       |_|      "
 echo -e "                                                                "
 echo -e "----------------------------------------------------------------"
-echo -e "    ██████╗ ██████╗ ██████╗     █████╗   ██████╗  █████╗        "
-echo -e "    ███═══╝ ██════╝ ██    ██╗  ██    ██╗ ██   ██╗██╔══██╗       "
-echo -e "    █████╗  █████╗  ██     ██╗██      ██╗██████╔╝███████║       "
-echo -e "    ███══╝  ██═══╝  ██    ██╔╝ ██    ██╔╝██   ██║██║  ██║       "
-echo -e "    ███╗    ██████╗ ██████╔═╝   ██████╔╝ ██   ██║██║  ██║       "
-echo -e "    ╚══╝    ╚═════╝ ╚═════╝     ╚═════╝  ╚═╝  ╚═╝╚═╝  ╚═╝       "
+echo -e "     ██   ██╗   █████╗    ██████╗   █████╗ ██████╗  █████╗      "
+echo -e "     ███  ██║  ██    ██╗  ██    ██╗██╔══██╗██   ██╗██╔══██╗     "
+echo -e "     ██ █ ██║ ██      ██╗ ██████╔═╝███████║██████╔╝███████║     "
+echo -e "     ██  ███║  ██    ██╔╝ ██    ██╗██║  ██║██║  ██║██║  ██║     "
+echo -e "     ██   ██║   ██████╔╝  ██████╔═╝██║  ██║██║  ██║██║  ██║     "
+echo -e "     ╚═╝  ╚═╝   ╚═════╝   ╚═════╝  ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝     "
 echo -e "----------------------------------------------------------------"
 echo -e " DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK. "
 echo -e "----------------------------------------------------------------"
@@ -186,12 +186,12 @@ function debloat() {
 	'totem'
 	'rhythmbox'
 	'blender'
-	'Fedora Media Writer'
-	'Game Conqueror'
-	'Inkscape'
-	'Kdenlive'
-	'OBS Studio'
-	'ScummVM'
+	'mediawriter'
+	'gameconqueror'
+	'inkscape'
+	'kdenlive'
+	'obs-studio'
+	'scummvm'
 	'gnome-shell-extension-arc-menu'
 	'gnome-shell-extension-dash-to-panel'
 	'gnome-shell-extension-desktop-icons'
@@ -274,10 +274,7 @@ PKGS=(
 #'gnome-shell-extension-impatience-git'
 #'gnome-shell-extension-no-annoyance-git'
 #'gnome-shell-extension-tiling-assistant'
-#'gnome-shell-extension-extensions'
-
-
-
+#'gnome-shell-extension-extension-list'
 
 
 )
@@ -335,6 +332,8 @@ done
 	flatpak install flathub org.polymc.PolyMC -y
 	flatpak install flathub io.github.shiftey.Desktop -y
 	flatpak install flathub com.brave.Browser -y
+	sleep 3s
+
 	
 	echo
 	#flatpak remote-add --if-not-exists plex-media-player https://flatpak.knapsu.eu/plex-media-player.flatpakrepo
@@ -344,7 +343,22 @@ done
 	git clone https://github.com/ryanoasis/nerd-fonts
 	cd ~/nerd-fonts
 	./install.sh FiraCode
+	sleep 3s
+
 	echo
+
+	#Extensions
+
+	#Tiling-Assistant
+	git clone https://github.com/Leleat/Tiling-Assistant
+	cd Tiling Assistant/scripts
+	sudo -i build.sh
+
+	#Extension-list
+	git clone https://github.com/tuberry/extension-list.git && cd extension-list
+	make && make install
+	sleep 3s
+
 	check_exit_status
 }
 
