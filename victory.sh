@@ -226,6 +226,7 @@ PKGS=(
 'dkms'
 'dnf-plugins-core'
 'filelight'
+'fira-code-fonts'
 'flex'
 'gimp' # Photo editing
 'gparted' # partition management
@@ -339,10 +340,10 @@ done
 	#flatpak install plex-media-player tv.plex.PlexMediaPlayer -y
 	echo
     cd ~/
-	git clone https://github.com/ryanoasis/nerd-fonts
-	cd ~/nerd-fonts
-	./install.sh FiraCode
-	sleep 3s
+	#git clone https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip
+	#cd ~/nerd-fonts
+	#./install.sh FiraCode
+	#sleep 3s
 
 	echo
 
@@ -461,7 +462,7 @@ function finish() {
             then
             	cecho
 		echo "----------------------------------------------------"
-		echo "---- VictoryFedora has been installed! ----"
+		echo "----     VictoryNobara has been installed!      ----"
 		echo "----------------------------------------------------"
 		echo
 		check_exit_status
