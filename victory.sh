@@ -229,7 +229,6 @@ PKGS=(
 'flex'
 'gimp' # Photo editing
 'gparted' # partition management
-'grub-customizer'
 'gwenview'
 'gydl'
 'haveged'
@@ -350,13 +349,16 @@ done
 	#Extensions
 
 	#Tiling-Assistant
-	git clone https://github.com/Leleat/Tiling-Assistant
-	cd Tiling Assistant/scripts
-	sudo -i build.sh
+	git clone https://github.com/Leleat/Tiling-Assistant.git && cd Tiling-Assistant/scripts
+	build.sh -i
 
 	#Extension-list
 	git clone https://github.com/tuberry/extension-list.git && cd extension-list
 	make && make install
+
+	#Tray-Icons-Reloaded
+	git clone https://github.com/MartinPL/Tray-Icons-Reloaded.git && cd Tray-Icons-Reloaded
+
 	sleep 3s
 
 	check_exit_status
