@@ -12,10 +12,6 @@
 # https://github.com/VictoryLinux                                   #
 #####################################################################
 
-exec 3>&1 4>&2
-trap 'exec 2>&4 1>&3' 0 1 2 3
-exec 1>victory-finish.log 2>&1
-# Everything below will go to the file 'victory-finish.log':
 
 echo -e "----------------------------------------------------------------"
 echo -e "  ____    ____  __                                              "
@@ -98,7 +94,7 @@ echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 	   echo "You replied $input, you are ready to start"
 	   echo
-	   echo "Starting VictoryNobara install script."
+	   echo "Starting VictoryNobara finish script."
 	   echo
 	   sleep 3s
 
