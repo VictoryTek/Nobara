@@ -179,7 +179,7 @@ function restart() {
 
             if [ "$answer" == "y" ]
             then
-            	cecho
+        echo
 		echo "----------------------------------------------------"
 		echo "----     VictoryNobara has been installed!      ----"
 		echo "----------------------------------------------------"
