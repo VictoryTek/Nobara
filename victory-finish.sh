@@ -114,7 +114,7 @@ fi
 
 #APPEARANCE
 function appearance() {
-	cd $HOME/VictoryFedora/
+	cd $HOME/VictoryNobara/
 	git clone https://github.com/daniruiz/flat-remix
 	git clone https://github.com/daniruiz/flat-remix-gtk
 	#mkdir -p ~/.icons && mkdir -p ~/.themes
