@@ -325,7 +325,6 @@ done
 	flatpak install flathub com.simplenote.Simplenote -y
 	#flatpak install flathub com.system76.Popsicle -y
     flatpak install flathub com.vscodium.codium -y
-    #flatpak install flathub com.mattjakeman.ExtensionManager -y
     flatpak install flathub com.bitwarden.desktop -y
     flatpak install flathub nl.hjdskes.gcolor3 -y
     flatpak install flathub com.usebottles.bottles -y
@@ -368,6 +367,17 @@ done
 	mv $HOME/Tray-Icons-Reloaded ~/.local/share/gnome-shell/extensions/trayIconsReloaded@selfmade.pl
 	sleep 3s
 
+	#Gnome 4x Overview UI Tune
+	cd ~
+	git clone https://github.com/axxapy/gnome-ui-tune.git
+	mv $HOME/gnome-ui-tune ~/.local/share/gnome-shell/extensions/gnome-ui-tune@itstime.tech
+	sleep 3s
+
+	#Vitals
+	cd ~
+	git clone https://github.com/corecoding/Vitals.git
+	mv $HOME/Vitals ~/.local/share/gnome-shell/extensions/Vitals@CoreCoding.com
+	sleep 3s
 	check_exit_status
 }
 
@@ -395,7 +405,7 @@ function configs() {
 	sleep 6s
    	echo
     	export PATH=$PATH:~/.local/bin
-    	cp -r $HOME/VictoryFedora/configs/* $HOME/.config/
+    	cp -r $HOME/VictoryNobara/configs/* $HOME/.config/
     	echo
     	mv $HOME/.config/bashrc $HOME/.config/.bashrc
     	mv $HOME/.config/.bashrc $HOME
@@ -403,6 +413,33 @@ function configs() {
     	mv $HOME/.config/face $HOME/.config/.face
     	mv $HOME/.config/.face $HOME
     
+	check_exit_status
+}
+
+# finish
+function restart() {
+	read -p "Are You ready to restart now? (y/n) " answer 
+
+            if [ "$answer" == "y" ]
+            then
+            	cecho
+		echo "----------------------------------------------------"
+		echo "----     VictoryNobara has been installed!      ----"
+		echo "----------------------------------------------------"
+		echo
+		check_exit_status
+		echo
+		echo "Restarting in 15s"
+		sleep 15s
+                shutdown -r now
+
+            if [ "$answer" == "n" ]
+            then
+		exit 1
+
+            fi
+        fi
+
 }
 
 greeting
@@ -413,3 +450,4 @@ debloat
 install
 backgrounds
 configs
+restart
