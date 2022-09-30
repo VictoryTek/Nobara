@@ -246,7 +246,7 @@ PKGS=(
 'nodejs'
 'npm'
 'ncdu'
-'networkmanager'
+'NetworkManager'
 'dconf-editor'
 'meson'
 'onboard'
