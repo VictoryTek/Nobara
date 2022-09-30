@@ -265,7 +265,6 @@ PKGS=(
 'ufw'
 'variety'
 '@virtualization'
-'virt-manager'
 'wireplumber'
 'youtube-dl'
 'chrome-gnome-shell'
