@@ -94,7 +94,7 @@ echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 	   echo "You replied $input, you are ready to start"
 	   echo
-	   echo "Starting VictoryFedora install script."
+	   echo "Starting VictoryNobara install script."
 	   echo
 	   sleep 3s
 
@@ -350,17 +350,20 @@ done
 	#Extensions
 
 	#Tiling-Assistant
+	cd ~
 	git clone https://github.com/Leleat/Tiling-Assistant.git && cd Tiling-Assistant/scripts
 	chmod +x build.sh
 	./build.sh -i
 	sleep 3s
 
 	#Extension-list
+	cd ~
 	git clone https://github.com/tuberry/extension-list.git && cd extension-list
 	make && make install
 	sleep 3s
 
 	#Tray-Icons-Reloaded
+	cd ~
 	git clone https://github.com/MartinPL/Tray-Icons-Reloaded.git
 	mv $HOME/Tray-Icons-Reloaded ~/.local/share/gnome-shell/extensions/trayIconsReloaded@selfmade.pl
 	sleep 3s

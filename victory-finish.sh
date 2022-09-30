@@ -81,7 +81,7 @@ echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 	
 #	sleep 5s
-	echo "ARE YOU READY TO START? [y,n]"
+	echo "ARE YOU READY TO FINISH? [y,n]"
 	read input
 
 	# did we get an input value?
@@ -94,7 +94,7 @@ echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 	   echo "You replied $input, you are ready to start"
 	   echo
-	   echo "Starting VictoryFedora install script."
+	   echo "Starting VictoryNobara install script."
 	   echo
 	   sleep 3s
 
@@ -112,6 +112,7 @@ fi
 	check_exit_status
 }
 
+#APPEARANCE
 function appearance() {
 	cd $HOME/VictoryFedora/
 	git clone https://github.com/daniruiz/flat-remix
@@ -144,13 +145,12 @@ function extensions() {
 	gnome-extensions enable window-list@gnome-shell-extensions.gcampax.github.com
 	gnome-extensions enable sound-output-device-chooser@kgshank.net
 #	gnome-extensions enable gnome-ui-tune@itstime.tech
-#	gnome-extensions enable pamac-updates@manjaro.org
 #	gnome-extensions enable taskicons@rliang.github.com
 
 	check_exit_status
 }
 
-#
+#CLEAN UP
 function clean-up() {
 	
 	echo "##################################"
@@ -162,13 +162,15 @@ function clean-up() {
 	echo
 	sudo rm -rf /usr/share/backgrounds/workstation
 	echo
-	sudo rm -rf ~/nerd-fonts
-    	echo
+	sudo rm -rf ~/extension-list
+    echo
+	sudo rm -rf ~/extension-list
+	echo
 	check_exit_status
 }
 
 # finish
-function finish() {
+function restart() {
 	read -p "Are You ready to restart now? (y/n) " answer 
 
             if [ "$answer" == "y" ]
@@ -193,8 +195,8 @@ function finish() {
 
 }
 
-
+greeting
 appearance
 extensions
 clean-up
-finish
+restart
