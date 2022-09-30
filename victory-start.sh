@@ -12,6 +12,10 @@
 # https://github.com/VictoryLinux                                   #
 #####################################################################
 
+exec 3>&1 4>&2
+trap 'exec 2>&4 1>&3' 0 1 2 3
+exec 1>victory-start.log 2>&1
+# Everything below will go to the file 'victory-start.log':
 
 echo -e "----------------------------------------------------------------"
 echo -e "  ____    ____  __                                              "
