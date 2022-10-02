@@ -423,9 +423,16 @@ function restart() {
             if [ "$answer" == "y" ]
             then
             	cecho
-		echo "----------------------------------------------------"
-		echo "----     VictoryNobara has been installed!      ----"
-		echo "----------------------------------------------------"
+		echo "---------------------------------------"
+		echo "----     VictoryNobara part 1      ----"
+		echo "----     has been installed!       ----"
+		echo "---------------------------------------"
+		echo
+		echo Restart 
+		echo or 
+		echo restart gnome shell 
+		echo & 
+		echo run script 2, victory-finish.sh
 		echo
 		check_exit_status
 		echo
