@@ -1,5 +1,6 @@
 #!/bin/bash
-# Finish Setup my Fedora Linux
+# Finish Setup my Nobara Linux
+# Ver. 1.2
 
 #####################################################################
 #  ____    ____  __                                                 #
@@ -124,8 +125,8 @@ function hostname() {
 then
     useradd -m -G wheel,libvirt -s /bin/bash $username 
 	passwd $username
-	cp -R /root/VictoryFedora /home/$username/
-    chown -R $username: /home/$username/VictoryFedora
+	cp -R /root/VictoryNobara /home/$username/
+    chown -R $username: /home/$username/VictoryNobara
 	read -p "Please name your computer:" nameofmachine
 	echo $nameofmachine > /etc/hostname
 else

@@ -1,5 +1,6 @@
 #!/bin/bash
-# Finish Setup my Fedora Linux
+# Finish Setup my Nobara Linux
+# Ver. 1.2
 
 #####################################################################
 #  ____    ____  __                                                 #
