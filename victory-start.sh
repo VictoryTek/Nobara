@@ -337,8 +337,8 @@ done
 	# Flatpaks
 	#flatpak install flathub com.system76.Popsicle -y
     flatpak install flathub com.bitwarden.desktop -y
-	flatpak install flathub com.brave.Browser -y
 	flatpak install flathub com.usebottles.bottles -y
+	flatpak install flathub com.brave.Browser -y
 	flatpak install flathub nl.hjdskes.gcolor3 -y
 	flatpak install flathub io.github.shiftey.Desktop -y
 	flatpak install flathub org.polymc.PolyMC -y
