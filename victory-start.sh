@@ -266,7 +266,7 @@ PKGS=(
 'ufw'
 'variety'
 '@virtualization'
-'wireplumber'
+#'wireplumber'
 'youtube-dl'
 'chrome-gnome-shell'
 'gnome-shell-extension-dash-to-dock'
@@ -335,17 +335,15 @@ done
 	sleep 3s
 	
 	# Flatpaks
-	#flatpak install flathub com.discordapp.Discord -y
-	#flatpak install flathub org.onlyoffice.desktopeditors -y
-	flatpak install flathub com.simplenote.Simplenote -y
 	#flatpak install flathub com.system76.Popsicle -y
-    flatpak install flathub com.vscodium.codium -y
     flatpak install flathub com.bitwarden.desktop -y
-    flatpak install flathub nl.hjdskes.gcolor3 -y
-    flatpak install flathub com.usebottles.bottles -y
-	flatpak install flathub org.polymc.PolyMC -y
-	flatpak install flathub io.github.shiftey.Desktop -y
 	flatpak install flathub com.brave.Browser -y
+	flatpak install flathub com.usebottles.bottles -y
+	flatpak install flathub nl.hjdskes.gcolor3 -y
+	flatpak install flathub io.github.shiftey.Desktop -y
+	flatpak install flathub org.polymc.PolyMC -y
+	flatpak install flathub com.simplenote.Simplenote -y
+    flatpak install flathub com.vscodium.codium -y
 	sleep 3s
 
 	
