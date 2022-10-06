@@ -187,7 +187,7 @@ function debloat() {
 	'totem'
 	'rhythmbox'
 	'blender'
-	'mediawriter'
+	#'mediawriter'
 	'gameconqueror'
 	'inkscape'
 	'kdenlive'
