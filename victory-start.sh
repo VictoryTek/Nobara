@@ -76,9 +76,9 @@ echo -e "----------------------------------------------------------------"
 echo -e " DO NOT JUST RUN THIS. EXAMINE AND JUDGE. RUN AT YOUR OWN RISK. "
 echo -e "----------------------------------------------------------------"
 
-echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-echo -e "++++++++         This is NOT a silent install        ++++++++"
-echo -e "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
+echo -e "++++++++         This is NOT a silent install           ++++++++"
+echo -e "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
 
 	
 #	sleep 5s
@@ -422,13 +422,19 @@ function configs() {
     	export PATH=$PATH:~/.local/bin
     	cp -r $HOME/VictoryNobara/configs/* $HOME/.config/
     	echo
+	# enable pre configured bashrc file
     	mv $HOME/.config/bashrc $HOME/.config/.bashrc
     	mv $HOME/.config/.bashrc $HOME
     	echo
+	# create a face icon
     	mv $HOME/.config/face $HOME/.config/.face
     	mv $HOME/.config/.face $HOME
-		echo
-
+	echo
+	# enable VM services
+	sudo systemctl start libvirtd
+	echo
+	sudo systemctl enable libvirtd
+	echo
     
 	check_exit_status
 }
@@ -445,6 +451,7 @@ function restart() {
 		echo "----     has been installed!       ----"
 		echo "---------------------------------------"
 		echo
+		
 		echo Restart 
 		echo or 
 		echo restart gnome shell 
