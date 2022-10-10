@@ -186,12 +186,12 @@ function debloat() {
 	'gnome-boxes'
 	'totem'
 	'rhythmbox'
-	'blender'
+	#'blender'
 	#'mediawriter'
 	'gameconqueror'
 	'inkscape'
-	'kdenlive'
-	'obs-studio'
+	#'kdenlive'
+	#'obs-studio'
 	'scummvm'
 	'gnome-shell-extension-arc-menu'
 	'gnome-shell-extension-dash-to-panel'
@@ -228,6 +228,7 @@ PKGS=(
 #'dnf-plugins-core'
 'chrome-gnome-shell'
 'dconf-editor'
+'discord'
 'filelight'
 'fira-code-fonts'
 #'flex'
@@ -337,14 +338,14 @@ done
 	
 	# Flatpaks
 	#flatpak install flathub com.system76.Popsicle -y
-    flatpak install flathub com.bitwarden.desktop -y
+        flatpak install flathub com.bitwarden.desktop -y
 	flatpak install flathub com.usebottles.bottles -y
 	flatpak install flathub com.brave.Browser -y
 	flatpak install flathub nl.hjdskes.gcolor3 -y
 	flatpak install flathub io.github.shiftey.Desktop -y
 	flatpak install flathub org.polymc.PolyMC -y
 	flatpak install flathub com.simplenote.Simplenote -y
-    flatpak install flathub com.vscodium.codium -y
+        flatpak install flathub com.vscodium.codium -y
 	sleep 3s
 
 	
