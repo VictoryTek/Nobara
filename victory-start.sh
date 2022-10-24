@@ -343,7 +343,7 @@ done
 	flatpak install flathub com.brave.Browser -y
 	flatpak install flathub nl.hjdskes.gcolor3 -y
 	flatpak install flathub io.github.shiftey.Desktop -y
-	flatpak install flathub org.polymc.PolyMC -y
+	flatpak install flathub org.prismlauncher.PrismLauncher -y
 	flatpak install flathub com.simplenote.Simplenote -y
     flatpak install flathub com.vscodium.codium -y
 	sleep 3s
