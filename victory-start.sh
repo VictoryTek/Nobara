@@ -315,12 +315,14 @@ done
 	dnf module install nodejs:15
 	echo
 	# Brave Browser
-	#sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
-	#echo
-	#sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
-	#echo
-	#sudo dnf install brave-browser -y
-	#echo
+	sudo dnf install dnf-plugins-core
+	echo
+	sudo dnf config-manager --add-repo https://brave-browser-rpm-release.s3.brave.com/x86_64/
+	echo
+	sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
+	echo
+	sudo dnf install brave-browser -y
+	echo
 	# Github Desktop
 	#cd Downloads
 	#echo
@@ -340,7 +342,7 @@ done
 	#flatpak install flathub com.system76.Popsicle -y
     flatpak install flathub com.bitwarden.desktop -y
 	flatpak install flathub com.usebottles.bottles -y
-	flatpak install flathub com.brave.Browser -y
+	#flatpak install flathub com.brave.Browser -y
 	flatpak install flathub nl.hjdskes.gcolor3 -y
 	flatpak install flathub io.github.shiftey.Desktop -y
 	flatpak install flathub org.prismlauncher.PrismLauncher -y
@@ -352,8 +354,8 @@ done
 	echo
 	#flatpak remote-add --if-not-exists plex-media-player https://flatpak.knapsu.eu/plex-media-player.flatpakrepo
 	#flatpak install plex-media-player tv.plex.PlexMediaPlayer -y
-	echo
-    cd ~/
+	#echo
+    #cd ~/
 	#git clone https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip
 	#cd ~/nerd-fonts
 	#./install.sh FiraCode
