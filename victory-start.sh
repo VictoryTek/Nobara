@@ -222,7 +222,9 @@ PKGS=(
 'alacarte'
 #'autoconf' # build
 #'automake' # build
+'autojump'
 'breeze-cursor-theme'
+'bpytop'
 'celluloid' # video players
 #'dkms'
 #'dnf-plugins-core'
@@ -256,6 +258,7 @@ PKGS=(
 #'patch'
 #'pkgconf'
 'powerline-fonts'
+'progress'
 'remmina'
 'snapper'
 'stacer'
@@ -264,6 +267,8 @@ PKGS=(
 'terminator'
 'terminus-font'
 'timeshift'
+'tldr'
+'trash-cli'
 'unrar'
 #'util-linux-user'
 'ufw'
