@@ -227,6 +227,7 @@ PKGS=(
 'chrome-gnome-shell'
 'dconf-editor'
 'discord'
+'dialog'
 'filelight'
 'fira-code-fonts'
 'gimp' # Photo editing
