@@ -220,6 +220,7 @@ sleep 6s
 
 PKGS=(
 'alacarte'
+'autofs'
 'autojump'
 'breeze-cursor-theme'
 'bpytop'
