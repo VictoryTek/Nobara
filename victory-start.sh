@@ -242,6 +242,7 @@ PKGS=(
 'mono-complete'
 'ncdu'
 'NetworkManager'
+'nfs-utils'
 'onboard'
 'powerline-fonts'
 'progress'
