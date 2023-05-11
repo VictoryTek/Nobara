@@ -245,6 +245,7 @@ PKGS=(
 'NetworkManager'
 'nfs-utils'
 'onboard'
+'piper'
 'powerline-fonts'
 'progress'
 'remmina'
