@@ -231,6 +231,7 @@ PKGS=(
 'dialog'
 'filelight'
 'fira-code-fonts'
+'gettext'
 'gimp' # Photo editing
 'gparted' # partition management
 'gwenview'
@@ -240,6 +241,7 @@ PKGS=(
 'kernel-devel'
 'kmail'
 'kmag'
+'meson'
 'mono-complete'
 'ncdu'
 'NetworkManager'
@@ -249,6 +251,7 @@ PKGS=(
 'powerline-fonts'
 'progress'
 'remmina'
+'sassc'
 'snapper'
 'stacer'
 'starship'
@@ -306,7 +309,11 @@ done
 	echo
 	sleep 3s
 	dnf module install nodejs:15
+	sleep 3s
 	echo
+	# Starship
+	curl -sS https://starship.rs/install.sh | sh
+	sleep 3s
 	# Brave Browser
 	sudo dnf install dnf-plugins-core
 	echo
@@ -367,8 +374,11 @@ done
 
 	#Extension-list
 	cd ~
-	git clone https://github.com/tuberry/extension-list.git && cd extension-list
-	make && make install
+#	git clone https://github.com/tuberry/extension-list.git && cd extension-list
+#	make && make install
+	git clone --recurse-submodules https://github.com/tuberry/extension-list.git && cd extension-list
+	meson setup build && meson install -C build
+	# meson setup build -Dtarget=system && meson install -C build # system-wide, default --prefix=/usr/local
 	sleep 3s
 
 	#Tray-Icons-Reloaded
