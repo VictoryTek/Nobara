@@ -227,8 +227,11 @@ PKGS=(
 'celluloid' # video players
 'chrome-gnome-shell'
 'dconf-editor'
+'@development-tools'
 'discord'
 'dialog'
+'dkms'
+'elfutils-libelf-devel'
 'filelight'
 'fira-code-fonts'
 'gettext'
@@ -239,6 +242,7 @@ PKGS=(
 'htop'
 'inxi'
 'kernel-devel'
+'kernel-headers'
 'kmail'
 'kmag'
 'meson'
@@ -250,6 +254,7 @@ PKGS=(
 'piper'
 'powerline-fonts'
 'progress'
+'qt5-qtx11extras'
 'remmina'
 'sassc'
 'snapper'
@@ -264,9 +269,10 @@ PKGS=(
 'unrar'
 'ufw'
 'variety'
-'@virtualization'
+#'@virtualization' 
 'wine-mono'
 'youtube-dl'
+'zlib-devel'
 'gnome-shell-extension-dash-to-dock'
 'gnome-shell-extension-caffeine'
 #'gnome-shell-extension-vitals-git'
@@ -297,8 +303,8 @@ done
 	sudo usermod -aG disk $(whoami)
 	echo
 	sleep 3s
-	
 	echo
+
 	# AppimageLauncher
 	cd ~/home/$(whoami)/Downloads
 	wget https://github.com/TheAssassin/AppImageLauncher/releases/download/v2.2.0/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm
@@ -311,9 +317,11 @@ done
 	dnf module install nodejs:15
 	sleep 3s
 	echo
+
 	# Starship
 	curl -sS https://starship.rs/install.sh | sh
 	sleep 3s
+
 	# Brave Browser
 	sudo dnf install dnf-plugins-core
 	echo
@@ -322,14 +330,30 @@ done
 	sudo rpm --import https://brave-browser-rpm-release.s3.brave.com/brave-core.asc
 	echo
 	sudo dnf install brave-browser -y
+	sleep 3s
+
+	# VirtualBox
+	sudo wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -P /etc/yum.repos.d/
 	echo
-	# Github Desktop
-	#cd Downloads
-	#echo
-    	#wget https://github.com/shiftkey/desktop/releases/download/release-2.9.9-linux2/GitHubDesktop-linux-2.9.9-linux2.rpm
-	#echo
-	#sudo rpm -i GitHubDesktop-linux-2.9.9-linux2.rpm
-    	#echo
+	sudo dnf install VirtualBox-7.0
+	echo
+	sudo systemctl enable vboxdrv --now
+	echo
+	sleep 3s
+	echo
+
+	# Install VirtualBox 7.0 Extension Pack
+	vboxmanage -v | cut -dr -f1
+	echo
+	wget https://download.virtualbox.org/virtualbox/7.0.x/Oracle_VM_VirtualBox_Extension_Pack-7.0.x.vbox-extpack
+	echo
+	sudo vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-7.0.x.vbox-extpack
+	echo
+	vboxmanage list extpacks
+	echo
+	sleep 3s
+	echo
+
 	# Sound Codecs
 	sudo dnf install gstreamer1-plugins-{bad-\*,good-\*,base} gstreamer1-plugin-openh264 gstreamer1-libav --exclude=gstreamer1-plugins-bad-free-devel -y
 	echo
@@ -349,19 +373,6 @@ done
 	flatpak install flathub com.simplenote.Simplenote -y
     flatpak install flathub com.vscodium.codium -y
 	sleep 3s
-
-	
-	echo
-	#flatpak remote-add --if-not-exists plex-media-player https://flatpak.knapsu.eu/plex-media-player.flatpakrepo
-	#flatpak install plex-media-player tv.plex.PlexMediaPlayer -y
-	#echo
-    #cd ~/
-	#git clone https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip
-	#cd ~/nerd-fonts
-	#./install.sh FiraCode
-	#sleep 3s
-
-	echo
 
 	#Extensions
 
