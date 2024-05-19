@@ -115,21 +115,24 @@ fi
 
 #APPEARANCE
 function appearance() {
-	cd $HOME/VictoryNobara/
+	cd $HOME/Nobara/
 	git clone https://github.com/daniruiz/flat-remix
 	git clone https://github.com/daniruiz/flat-remix-gtk
+	git clone https://github.com/bikass/kora.git
+	sudo dnf copr enable peterwu/rendezvous
+	sudo dnf install bibata-cursor-themes
 	#mkdir -p ~/.icons && mkdir -p ~/.themes
 #	cp -r flat-remix/Flat-Remix* ~/.icons/ && cp -r flat-remix-gtk/themes/Flat-Remix* ~/.themes/
 	sudo mv flat-remix/Flat-Remix* /usr/share/icons/ 
 	sudo mv flat-remix-gtk/themes/Flat-Remix* /usr/share/themes/
 	rm -rf ~/flat-remix flat-remix-gtk
-	gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix-GTK-Blue-Dark"
-	gsettings set org.gnome.desktop.interface icon-theme "Flat-Remix-Blue-Dark"
+#	gsettings set org.gnome.desktop.interface gtk-theme "Flat-Remix-GTK-Blue-Dark"
+	gsettings set org.gnome.desktop.interface icon-theme "kora"
 	echo
 	gsettings set org.gnome.shell favorite-apps "['brave-browser.desktop', 'firefox.desktop', 'org.gnome.Nautilus.desktop', 'terminator.desktop', 'nobara-sync.desktop', 'com.simplenote.Simplenote.desktop', 'virtualbox.desktop', 'com.vscodium.codium.desktop', 'onboard.desktop']"
 	gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 	gsettings set org.gnome.desktop.interface clock-format '12h'   
-	gsettings set org.gnome.desktop.interface cursor-theme 'Breeze'
+	gsettings set org.gnome.desktop.interface cursor-theme 'Bibata-Modern-Classic'
 	echo
 	gsettings set org.fedorahosted.background-logo-extension "True"
 	gsettings set org.fedorahosted.background-logo-extension.logo-file "/usr/share/nobara-logos/nobara_lightbackground.svg"
@@ -144,7 +147,7 @@ function extensions() {
 	gnome-extensions enable dash-to-dock@micxgx.gmail.com
 #	gnome-extensions enable impatience@gfxmonk.net
 #	gnome-extensions enable noannoyance@daase.net
-	gnome-extensions enable pop-shell@system76.com
+#	gnome-extensions enable pop-shell@system76.com
 	gnome-extensions enable tiling-assistant@leleat-on-github
 #	gnome-extensions enable Vitals@CoreCoding.com
 	gnome-extensions enable window-list@gnome-shell-extensions.gcampax.github.com
