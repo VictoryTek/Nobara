@@ -330,7 +330,7 @@ done
 	# VirtualBox
 	sudo wget http://download.virtualbox.org/virtualbox/rpm/fedora/virtualbox.repo -P /etc/yum.repos.d/
 	echo
-	sudo dnf install VirtualBox-7.0
+	sudo dnf install VirtualBox-7.0 -y
 	echo
 	sudo systemctl enable vboxdrv --now
 	echo
