@@ -121,6 +121,10 @@ function appearance() {
 	git clone https://github.com/bikass/kora.git
 	sudo dnf copr enable peterwu/rendezvous
 	sudo dnf install bibata-cursor-themes
+	sudo mv kora/kora/ /usr/share/icons/
+	sudo mv kora/kora-light/ /usr/share/icons/
+	sudo mv kora/kora-light-panel/ /usr/share/icons/
+	sudo mv kora/kora-pgrey/ /usr/share/icons/
 	#mkdir -p ~/.icons && mkdir -p ~/.themes
 #	cp -r flat-remix/Flat-Remix* ~/.icons/ && cp -r flat-remix-gtk/themes/Flat-Remix* ~/.themes/
 	sudo mv flat-remix/Flat-Remix* /usr/share/icons/ 
