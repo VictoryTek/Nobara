@@ -186,12 +186,8 @@ function debloat() {
 	'gnome-boxes'
 	'totem'
 	'rhythmbox'
-	#'blender'
-	#'mediawriter'
 	'gameconqueror'
 	'inkscape'
-	#'kdenlive'
-	#'obs-studio'
 	'scummvm'
 	'gnome-shell-extension-arc-menu'
 	'gnome-shell-extension-dash-to-panel'
@@ -238,7 +234,6 @@ PKGS=(
 'gimp' # Photo editing
 'gparted' # partition management
 'gwenview'
-'gydl'
 'htop'
 'inxi'
 'kernel-devel'
