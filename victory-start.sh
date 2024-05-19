@@ -290,19 +290,19 @@ for PKG in "${PKGS[@]}"; do
     sudo dnf install "$PKG" -y
 done
 
-	sudo systemctl start libvirtd
-	sudo systemctl enable libvirtd
+	#sudo systemctl start libvirtd
+	#sudo systemctl enable libvirtd
 	echo
-	sudo virsh net-start default
-	sudo virsh net-autostart default
+	#sudo virsh net-start default
+	#sudo virsh net-autostart default
 	echo
-	sudo usermod -aG libvirt $(whoami)
-	sudo usermod -aG libvirt-qemu $(whoami)
-	sudo usermod -aG kvm $(whoami)
-	sudo usermod -aG input $(whoami)
-	sudo usermod -aG disk $(whoami)
+	#sudo usermod -aG libvirt $(whoami)
+	#sudo usermod -aG libvirt-qemu $(whoami)
+	#sudo usermod -aG kvm $(whoami)
+	#sudo usermod -aG input $(whoami)
+	#sudo usermod -aG disk $(whoami)
 	echo
-	sleep 3s
+	#sleep 3s
 	echo
 
 	# AppimageLauncher
@@ -447,9 +447,9 @@ function configs() {
     	mv $HOME/.config/.face $HOME
 	echo
 	# enable VM services
-	sudo systemctl start libvirtd
+	#sudo systemctl start libvirtd
 	echo
-	sudo systemctl enable libvirtd
+	#sudo systemctl enable libvirtd
 	echo
     
 	check_exit_status
