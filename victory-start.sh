@@ -228,6 +228,7 @@ PKGS=(
 'dialog'
 'dkms'
 'elfutils-libelf-devel'
+'fastfetch'
 'filelight'
 'fira-code-fonts'
 'gettext'
@@ -359,14 +360,17 @@ done
 	
 	# Flatpaks
 	#flatpak install flathub com.system76.Popsicle -y
-    	flatpak install flathub com.bitwarden.desktop -y
+    flatpak install flathub com.bitwarden.desktop -y
 	#flatpak install flathub com.usebottles.bottles -y
 	#flatpak install flathub com.brave.Browser -y
-	flatpak install flathub nl.hjdskes.gcolor3 -y
+	#flatpak install flathub nl.hjdskes.gcolor3 -y
 	flatpak install flathub io.github.shiftey.Desktop -y
 	flatpak install flathub org.prismlauncher.PrismLauncher -y
 	flatpak install flathub com.simplenote.Simplenote -y
-    	flatpak install flathub com.vscodium.codium -y
+    flatpak install flathub com.vscodium.codium -y
+	flatpak install flathub dev.deedles.Trayscale
+	flatpak install flathub com.mattjakeman.ExtensionManager
+
 	sleep 3s
 
 	#Extensions
@@ -431,7 +435,7 @@ function configs() {
 	sleep 6s
    	echo
     	export PATH=$PATH:~/.local/bin
-    	cp -r $HOME/VictoryNobara/configs/* $HOME/.config/
+    	cp -r $HOME/Nobara/configs/* $HOME/.config/
     	echo
 	# enable pre configured bashrc file
     	mv $HOME/.config/bashrc $HOME/.config/.bashrc
