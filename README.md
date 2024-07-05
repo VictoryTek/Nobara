@@ -11,13 +11,13 @@ Download ArchISO from https://nobaraproject.org/ and put it on a USB drive with 
 ```
 git clone https://github.com/VictoryTek/Nobara
 cd Nobara
-chmod +x victory-start.sh && chmod +x victory-finish.sh
+chmod +x start.sh && chmod +x finish.sh
 
-./victory-start.sh
+./start.sh
 
 Restart PC or Restart Gnome Shell
 
-./victory-finish.sh
+./finish.sh
 
 ```
 
