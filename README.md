@@ -9,8 +9,8 @@ This README contains the steps I do to install and configure a fully-functional 
 Download ArchISO from https://nobaraproject.org/ and put it on a USB drive with Etcher, Ventoy, Rufus or Popsicle.
 
 ```
-git clone https://github.com/VictoryLinux/VictoryNobara
-cd VictoryNobara
+git clone https://github.com/VictoryLinux/Nobara
+cd Nobara
 chmod +x victory-start.sh && chmod +x victory-finish.sh
 
 ./victory-start.sh
