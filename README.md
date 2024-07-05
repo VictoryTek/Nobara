@@ -1,4 +1,4 @@
-# VictoryNobara Installer Script
+# Nobara Installer Script
 
 <img src="https://github.com/VictoryLinux/VictoryNobara/blob/main/VictoryNobara.png" />
 
